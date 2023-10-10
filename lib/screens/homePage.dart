@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatssap_clone/screens/calls.dart';
+import 'package:whatssap_clone/screens/camera.dart';
 import 'package:whatssap_clone/screens/chats.dart';
 import 'package:whatssap_clone/screens/community.dart';
 import 'package:whatssap_clone/screens/updates.dart';
@@ -25,7 +26,13 @@ class _homePageState extends State<homePage> {
           actions: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Icon(Icons.camera_alt_outlined),
+              child: IconButton(
+                  onPressed: () {
+                    //navigating to camer
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => camera()));
+                  },
+                  icon: Icon(Icons.camera_alt_outlined)),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
