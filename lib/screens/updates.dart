@@ -59,7 +59,7 @@ class _updatesState extends State<updates> {
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: 2,
                 itemBuilder: (context, index) => ListTile(
-                    title: Text(content[1].name,
+                    title: Text(content[index].name,
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -69,7 +69,7 @@ class _updatesState extends State<updates> {
                     leading: CircleAvatar(
                         radius: 30,
                         backgroundColor: customColor.secondaryGreen,
-                        child: Image.asset(content[1].imagePath))),
+                        child: Image.asset(content[index].imagePath))),
               ),
             ),
           ),

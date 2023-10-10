@@ -6,10 +6,14 @@ import 'package:whatssap_clone/screens/allMasseges.dart';
 // ignore: must_be_immutable
 class chats extends StatelessWidget {
   final CustomColor = myColors();
+  // var totalCount;
 
   chats({super.key});
   @override
   Widget build(BuildContext context) {
+//     for(int i=0; i<content.length; i++){
+//   totalCount+=content[index].massegCount;
+// }
     return Scaffold(
         body: ListView.builder(
           itemCount: content.length,

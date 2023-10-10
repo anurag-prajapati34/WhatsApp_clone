@@ -19,7 +19,7 @@ List content = [
   massegeData(
       name: "akshra",
       massege: "hello anurag",
-      imagePath: "assets/images/boy.png",
+      imagePath: "assets/images/girl.png",
       date: "yesterday",
       massegCount: 3,
       timeformat: "pm"),
@@ -56,7 +56,7 @@ List content = [
       massege: "hell0",
       massegCount: 0,
       date: "12/09/1983",
-      imagePath: "assets/images/boy.png",
+      imagePath: "assets/images/girl.png",
       timeformat: "am"),
   massegeData(
       name: "Mikesh",
@@ -89,7 +89,7 @@ List content = [
   massegeData(
       name: "Suman",
       massege: "hello bhaiya",
-      imagePath: "assets/images/boy.png",
+      imagePath: "assets/images/girl.png",
       date: "23/09/23",
       massegCount: 0,
       timeformat: "am"),
