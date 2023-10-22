@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatssap_clone/model.dart';
 import 'package:whatssap_clone/screens/calls.dart';
 import 'package:whatssap_clone/screens/camera.dart';
 import 'package:whatssap_clone/screens/chats.dart';
@@ -34,6 +35,17 @@ class _homePageState extends State<homePage>
   }
 
   Widget build(BuildContext context) {
+    /// functionality to count chats and
+    /// showing in chat tab it will count atomatically number of masseges
+    int totalCount = 0;
+    int count = 0;
+
+    for (int i = 0; i < content.length; i++) {
+      totalCount = content[i].massegCount;
+      count = count + totalCount;
+    }
+/////
+
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -92,12 +104,12 @@ class _homePageState extends State<homePage>
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                        Text("Chats"),
+                        Text("Chats", style: TextStyle(fontSize: 15)),
                         CircleAvatar(
                             radius: 10,
                             backgroundColor: Colors.white,
                             child: Center(
-                              child: Text("3",
+                              child: Text("${count}",
                                   style: TextStyle(
                                       fontSize: 12,
                                       fontWeight: FontWeight.bold)),

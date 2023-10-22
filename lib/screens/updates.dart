@@ -41,9 +41,11 @@ class _updatesState extends State<updates> {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               leading: Stack(alignment: Alignment.bottomRight, children: [
                 CircleAvatar(
-                    radius: 30, backgroundColor: customColor.primaryColor),
+                    radius: 30,
+                    backgroundColor: customColor.primaryColor,
+                    foregroundImage: AssetImage("assets/images/boy.png")),
                 CircleAvatar(
-                    radius: 15,
+                    radius: 13,
                     backgroundColor: customColor.secondaryGreen,
                     child: Icon(Icons.add, color: Colors.white))
               ]),
