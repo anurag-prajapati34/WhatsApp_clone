@@ -68,9 +68,12 @@ class chats extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => allMassege()));
             },
-            child: Icon(
-              Icons.chat,
-            )));
+            child: IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => allMassege()));
+                },
+                icon: Icon(Icons.chat))));
   }
 }
 

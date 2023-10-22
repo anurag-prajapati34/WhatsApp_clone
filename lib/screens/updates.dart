@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatssap_clone/colors.dart';
 import 'package:whatssap_clone/model.dart';
+import 'package:whatssap_clone/screens/camera.dart';
 
 // ignore: must_be_immutable
 class updates extends StatefulWidget {
@@ -212,7 +213,12 @@ class _updatesState extends State<updates> {
           ),
           FloatingActionButton(
             onPressed: () {},
-            child: Icon(Icons.camera_alt),
+            child: IconButton(
+                icon: Icon(Icons.camera_alt),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => camera()));
+                }),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             backgroundColor: customColor.primaryColor,

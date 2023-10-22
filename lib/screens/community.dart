@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:whatssap_clone/colors.dart';
 
+// ignore: camel_case_types, must_be_immutable
 ////creating community screen ui
-class community extends StatelessWidget {
+class community extends StatefulWidget {
+  community({super.key});
+
+  @override
+  State<community> createState() => _communityState();
+}
+
+class _communityState extends State<community> {
   var customColor = myColors();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
