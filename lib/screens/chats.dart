@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatssap_clone/colors.dart';
 import 'package:whatssap_clone/model.dart';
 import 'package:whatssap_clone/screens/allMasseges.dart';
+import 'package:whatssap_clone/screens/conversation.dart';
 
 // ignore: must_be_immutable
 class chats extends StatelessWidget {
@@ -17,6 +18,9 @@ class chats extends StatelessWidget {
         body: ListView.builder(
           itemCount: content.length,
           itemBuilder: (context, index) => ListTile(
+            ///ontap function
+            onTap: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => conversation())),
             ////profile image
             leading: CircleAvatar(
               radius: 30,

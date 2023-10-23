@@ -1,3 +1,6 @@
+import 'dart:ffi';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:whatssap_clone/model.dart';
 import 'package:whatssap_clone/screens/calls.dart';
@@ -73,16 +76,48 @@ class _homePageState extends State<homePage>
                 ? Icon(Icons.search)
                 : null,
           ),
-          PopupMenuButton(
-              color: Colors.white,
-              itemBuilder: (context) => [
-                    PopupMenuItem(child: Text("New group"), value: 1),
-                    PopupMenuItem(child: Text("New broadcast"), value: 2),
-                    PopupMenuItem(child: Text("Linked devices"), value: 3),
-                    PopupMenuItem(child: Text("Starred messages"), value: 4),
-                    PopupMenuItem(child: Text("Payments"), value: 5),
-                    PopupMenuItem(child: Text("Settings"), value: 6),
-                  ])
+
+          ///// popup menu button = i have added functionality to show popup
+          ///diffrent diffrent popu menu but  for diffrent diffrent screens
+          _controller.index == 1
+              ? PopupMenuButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  color: Colors.white,
+                  itemBuilder: (context) => [
+                        PopupMenuItem(child: Text("New group"), value: 1),
+                        PopupMenuItem(
+                          child: Text(
+                            "New broadcast",
+                          ),
+                          value: 2,
+                        ),
+                        PopupMenuItem(child: Text("Linked devices"), value: 3),
+                        PopupMenuItem(child: Text("Starred message"), value: 4),
+                        PopupMenuItem(child: Text("Payments"), value: 5),
+                        PopupMenuItem(child: Text("Settings"), value: 6)
+                      ])
+              : _controller.index == 3
+                  ? PopupMenuButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      itemBuilder: (context) => [
+                            PopupMenuItem(
+                                child: Text("Clear call log"), value: 1),
+                            PopupMenuItem(
+                              child: Text("Settings"),
+                              value: 2,
+                            )
+                          ])
+                  : PopupMenuButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      itemBuilder: (context) => [
+                            PopupMenuItem(
+                              child: Text("Settings"),
+                              value: 1,
+                            )
+                          ])
         ],
       ),
 

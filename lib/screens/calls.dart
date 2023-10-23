@@ -17,13 +17,13 @@ class calls extends StatelessWidget {
                   radius: 30,
                   backgroundColor: customColor.primaryColor,
                   child: Icon(
-                    Icons.link_outlined,
+                    Icons.add_call,
                     color: Colors.white,
                     size: 30,
                   )),
-              title: Text("Create call link",
+              title: Text("New call",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-              subtitle: Text("Share a link for your WhatsApp call",
+              subtitle: Text("Call one or more of your contacts",
                   style: TextStyle(fontSize: 17)),
             ),
             ListTile(
@@ -66,7 +66,8 @@ class calls extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
             onPressed: () {},
             child: Icon(
-              Icons.add_call,
+              Icons.add,
+              size: 30,
             )));
   }
 }
